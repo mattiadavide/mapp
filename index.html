@@ -4,35 +4,37 @@
     <script src="https://d3js.org/topojson.v0.min.js"></script>
 	<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.css" />
 	 <script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   
 <head>
   <style>    #mapid { 
   height: 110%;
 }   
-    
-  input {
-  text-transform: lowercase;
-}
+
     
     
     </style>
-  
+ 
     
     
     </head>
   
 <body>
+    <script> 
+ $(function() {
+    $('input').keyup(function() {
+        this.value = this.value.toLowerCase();
+    });
+});
     
+</script>   
     
-<input type="button" onclick="location.href=''+document.getElementById('dropdownID').value" value="NAVIGA" />
+<input type="button" onclick="location.href=''+document.getElementById('dropdownID').value " value="NAVIGA" />
 <input type="text" id="dropdownID">
 
             <div id="mapid"></div>
  
-    
-    
-    
-
+ 
    
     
 <script>navigator.geolocation.getCurrentPosition(function(location) {
