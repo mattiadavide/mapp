@@ -6,7 +6,12 @@
 	 <script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
   
 <head>
-  <style>    #mapid { 
+  <style>  
+       body {
+        overflow: hidden;
+    }
+      
+      #mapid { 
   height: 110%;
 }   
     
@@ -28,10 +33,13 @@
 });
     
 </script>  
-    
+  <div style=" height: 5%; width: 100%; background-color: white;  position: absolute; left: 0;top: 0;">  
 <input type="button" onclick="location.href='mattiadavide.github.io/mapp/'+document.getElementById('dropdownID').value" value="NAVIGA" />
 <input type="text" id="dropdownID">
-<iframe src="https://www.google.com/maps/d/embed?mid=1LcQxr7ven9-w_VpEDwiGtq8aj1Iwq9wI" width="100%" height="100%"></iframe>
+    </div>
+<iframe style="z-index: -1; position: absolute;
+  left: 0px;
+  top: 0px;" src="https://www.google.com/maps/d/embed?mid=1LcQxr7ven9-w_VpEDwiGtq8aj1Iwq9wI" width="100%" height="100%"></iframe>
  
    
     
